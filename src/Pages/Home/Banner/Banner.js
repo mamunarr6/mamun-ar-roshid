@@ -15,8 +15,10 @@ const Banner = () => {
                         download my
                         resume for more
                         information about me.</p>
-                    <button
-                        class="border border-gray-700 rounded-3xl px-5 py-2 hover:border-purple-500 hover:text-purple-500">DOWNLOAD</button>
+                    <a target="_blank" href="https://drive.google.com/file/d/1C9Ieyrg12bkuEu6y5b49TmarY0w1ct9a/view?usp=sharing"><button
+                        class="border border-gray-700 rounded-3xl px-5 py-2 hover:border-purple-500 hover:text-purple-500">DOWNLOAD</button></a>
+
+
 
                 </div>
                 <div className="col-span-4 border-r-8 border-b-8 border-double border-gray-500 flex justify-end">
