@@ -11,18 +11,26 @@ const Contact = () => {
     };
 
     return (
-        <div className="container mx-auto my-10">
-            <h1 className="text-4xl text-center my-8">Get In Touch</h1>
-            <div className="flex justify-center ">
-                <form onSubmit={handleSubmit(onSubmit)} className="bg-gray-200 w-9/12 p-10">
-                    <input className="w-full mb-3 py-2 pl-3"  {...register("name", { required: true })} placeholder="Enter Your Name" /> <br />
-                    <input type="email" className="w-full mb-3 py-2 pl-3"  {...register("email", { required: true })} placeholder="Enter Your Name" /> <br />
+        <div className="contact-bg">
+            <div className="container mx-auto py-10">
+                <h1 className="text-4xl text-center my-8 text-gray-300 ">Connect With Me</h1>
+                <div className=" grid grid-cols-12">
+                    <div className="col-span-6">
+                        <h2 className="text-gray-300 text-2xl w-80 mt-10 leading-8 tracking-wide">Interested in working with me
+                            or perhaps just talk?</h2>
+                    </div>
+                    <div className="flex justify-center col-span-6">
+                        <form onSubmit={handleSubmit(onSubmit)} className=" w-full p-10">
+                            <input className="w-full mb-5 py-4 pl-3 bg-gray-900 text-gray-300 rounded-md"  {...register("name", { required: true })} placeholder="Enter Your Name" /> <br />
+                            <input type="email" className="w-full mb-5 py-4 pl-3 bg-gray-900 text-gray-300 rounded-md"  {...register("email", { required: true })} placeholder="Enter Your Name" /> <br />
 
-                    <textarea className="w-full mb-3 py-2 pl-3" {...register("massege", { required: true })} placeholder="Write massege here..." /> <br />
-                    {errors.massege && <span>This field is required</span>}
+                            <textarea className="w-full mb-5 py-4 pl-3 bg-gray-900 text-gray-300 rounded-md" {...register("massege", { required: true })} placeholder="Write massege here..." /> <br />
+                            {errors.massege && <span>This field is required</span>}
 
-                    <input className="w-full mb-3 py-2" type="submit" />
-                </form>
+                            <input className="common-button" type="submit" value="Send Message" />
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
     );

@@ -1,0 +1,33 @@
+/* =================================
+            banner section
+================================== */
+.banner-bg{
+    background-color: #141628;
+}
+.common-button{
+    color: white;
+    border: 2px solid #616bf1;
+    background-color: #616bf1;
+    padding: 10px 20px;
+    border-radius: 50px;
+    transition: all 0.3s;
+}
+.common-button:hover{
+    color: #616bf1;
+    background-color: #141628;
+    border: 2px solid #616bf1;
+}
+
+/* =================================
+            about section
+================================== */
+.about-bg, .contact-bg{
+    background-color: #1b1e32;
+}
+.about-img{
+    border-radius: 200px 30px 200px 30px;
+}
+
+/* =================================
+            project section
+================================== */

@@ -1,28 +1,29 @@
 import React from 'react';
-import mamun from '../../../images/mamun1.png'
+import bg from '../../../images/bg-1.png'
+
 
 const Banner = () => {
     return (
-        <div className="bg-gray-200">
+        <div className="banner-bg py-20">
             <div className="container mx-auto grid grid-cols-12 items-center py-10">
                 <div className="col-span-8 text-center">
 
-                    <h5 class="text-xl">Hi there ! </h5>
-                    <h4 class="text-3xl py-1">I am Mamun Ar Roshid</h4>
-                    <h1 class="text-4xl py-2">Welcome To My Profile</h1>
-                    <p class="text-gray-700 py-2 lg:px-52">I am a full web stack developer.Building website is my
+                    <h5 class="text-xl text-gray-300">Hi there ! </h5>
+                    <h4 class="text-3xl py-1 text-gray-200">I am Mamun Ar Roshid</h4>
+                    <h1 class="text-4xl py-2 text-gray-200">Welcome To My Profile</h1>
+                    <p class="text-gray-400 lg:px-52 pt-6 pb-10">I am a full stack web developer.Building website is my
                         passion.Please
                         download my
                         resume for more
                         information about me.</p>
-                    <a target="_blank" href="https://drive.google.com/file/d/1C9Ieyrg12bkuEu6y5b49TmarY0w1ct9a/view?usp=sharing"><button
-                        class="border border-gray-700 rounded-3xl px-5 py-2 hover:border-purple-500 hover:text-purple-500">DOWNLOAD</button></a>
+                    <a target="_blank" rel="noreferrer" href="https://drive.google.com/file/d/1C9Ieyrg12bkuEu6y5b49TmarY0w1ct9a/view?usp=sharing"><button
+                        class="common-button">DOWNLOAD RESUME</button></a>
 
 
 
                 </div>
-                <div className="col-span-4 border-r-8 border-b-8 border-double border-gray-500 flex justify-end">
-                    <img src={mamun} alt="" />
+                <div className="col-span-4">
+                    <img src={bg} alt="" />
                 </div>
             </div>
         </div>
