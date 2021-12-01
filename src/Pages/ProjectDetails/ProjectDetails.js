@@ -6,7 +6,7 @@ const ProjectDetails = () => {
     const [project, setProject] = useState();
     const { id } = useParams();
     useEffect(() => {
-        fetch(`http://localhost:5000/projects/${id}`)
+        fetch(`https://fast-inlet-38559.herokuapp.com/projects/${id}`)
             .then(res => res.json())
             .then(data => setProject(data))
     }, [id])

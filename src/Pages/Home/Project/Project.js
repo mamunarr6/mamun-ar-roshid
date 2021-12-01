@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Project = () => {
     const [projects, setProjects] = useState();
     useEffect(() => {
-        fetch('http://localhost:5000/projects')
+        fetch('https://fast-inlet-38559.herokuapp.com/projects')
             .then(res => res.json())
             .then(data => {
                 setProjects(data)

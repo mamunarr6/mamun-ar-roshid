@@ -1,0 +1,113 @@
+.navigation,.common-bg{
+    background: linear-gradient(90deg,#141628 0%,#141628 100%);
+    /* color: #141628; */
+
+}
+.navbarItems{
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+}
+.navbar-logo{
+    color: #fff;
+    justify-self: start;
+    margin-left: 5px;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+.nav-menu{
+    display: grid;
+    grid-template-columns: repeat(5,auto);
+    grid-gap: 5px;
+    list-style: none;
+    text-align: center;
+    justify-content: right;
+    text-decoration: none;
+}
+.nav-links{
+    color: #fff;
+    padding: 0.5rem 0.5rem;
+    text-decoration: none;
+}
+.nav-links:hover{
+    background-color: #1e2238;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+.nav-link-mobile{
+    display: none;
+}
+.menu-icon{
+    display: none;
+}
+
+/* ======================
+    dashboard style
+========================= */
+.dashboard-nav:hover{
+    background: linear-gradient(90deg,#1b1e32 0%,#1b1e32 100%);
+    color: #fff;
+    padding-left: 15px;
+    transition: all 0.3s ease-out;
+}
+
+/* ============================
+    responsive navigation
+============================== */
+
+@media only screen and (max-width: 960px) {
+    .navbarItems{
+        position: relative;
+    }
+    .nav-menu{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 500px;
+        position: absolute;
+        top: 80px;
+        left: -100%;
+        opacity: 1;
+        transition: all 0.3s ease;
+    }
+    .nav-menu.active{
+        background-color: #1b1e32;
+        left: 0;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 1;
+    }
+    .nav-links{
+        text-align: center;
+        padding: 2rem;
+        width: 100%;
+        display: table;
+    }
+    .profile{
+        margin-left: 50%;
+        margin-top: 5px;
+    }
+    .nav-links:hover{
+        background-color: #1b1e32;
+        border-radius: 0;
+    }
+   
+    .menu-icon{
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(-100%, 60%);
+        font-size: 1.8rem;
+        cursor: pointer;
+    }
+}
+
+@media only screen and (max-width: 360px){
+    .navbar-logo{
+        font-size: 25px;
+    }
+}

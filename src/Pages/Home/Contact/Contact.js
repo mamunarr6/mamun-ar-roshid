@@ -1,8 +1,8 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import emailjs from "emailjs-com";
+import { IoCallOutline, IoHomeOutline, IoLogoFacebook, IoLogoInstagram, IoLogoLinkedin, IoMailOutline } from "react-icons/io5";
 
 const Contact = () => {
-    const [ok, setOk] = useState(false);
     const form = useRef();
 
     const sendEmail = (e) => {
@@ -10,7 +10,7 @@ const Contact = () => {
         emailjs.sendForm('service_zxk4d6s', 'template_ymditp7', form.current, 'user_1pxGepEMSAeVDd2NsmXNA')
             .then((result) => {
                 if (result.text) {
-                    setOk(true)
+                    alert('Your message sent successfully')
                 };
             }, (error) => {
                 console.log(error.text);
@@ -19,11 +19,57 @@ const Contact = () => {
     }
     return (
         <div className="contact-bg">
+
             <div className="container mx-auto py-10">
-                <h1 className="text-4xl text-center my-8 text-gray-300 ">Connect With Me</h1>
+                <h1 className="text-4xl text-center mt-8 mb-4 text-gray-300 ">Contact Me</h1>
+                <p className="text-gray-400 text-center mb-4">Reach me on social media or filling out the contact form</p>
                 <div className=" grid grid-cols-12">
+                    {/* ===========================
+                            Contact Information
+                    ============================ */}
                     <div className="col-span-12 md:col-span-6">
-                        <h2 className="text-gray-300 text-2xl mt-10 leading-8 tracking-wide">Reach me on social media or filling out the contact form</h2>
+                        <div className="flex items-center justify-center mt-14">
+                            <div className="text-white">
+                                <div className="flex items-center gap-2 mb-4">
+                                    <div>
+                                        <IoHomeOutline className="text-white text-3xl" />
+                                    </div>
+                                    <div>
+                                        <h4 className="text-xl text-gray-300">Address :</h4>
+                                        <h5 className="text-gray-400">Mymensingh, Bangladesh</h5>
+                                    </div>
+                                </div>
+                                <div className="flex items-center gap-2 mb-4">
+                                    <div>
+                                        <IoCallOutline className="text-white text-3xl" />
+                                    </div>
+                                    <div>
+                                        <h4 className="text-xl text-gray-300"> Phone :</h4>
+                                        <h5 className="text-gray-400">+8801780360597</h5>
+                                    </div>
+                                </div>
+                                <div className="flex items-center gap-2 mb-4">
+                                    <div>
+                                        <IoMailOutline className="text-white text-3xl" />
+                                    </div>
+                                    <div>
+                                        <h4 className="text-xl text-gray-300">Email :</h4>
+                                        <h5 className="text-gray-400">mamunarr6@gmail.com</h5>
+                                    </div>
+                                </div>
+                                <div className="flex justify-center items-center gap-5 mt-10">
+                                    <a target="_blank" rel="noreferrer" href="https://www.facebook.com/rmb.mamun.1/">
+                                        <IoLogoFacebook className="text-blue-600 text-3xl" />
+                                    </a>
+                                    <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/mamun-ar-roshid/">
+                                        <IoLogoLinkedin className="text-blue-500 text-3xl" />
+                                    </a>
+                                    <a target="_blank" rel="noreferrer" href="https://www.instagram.com/mamunarr6/">
+                                        <IoLogoInstagram className="text-pink-600  text-3xl" />
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     {/* ===========================
                             Contact Form
